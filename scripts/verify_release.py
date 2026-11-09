@@ -33,7 +33,8 @@ def verify_sha():
         require(rel not in expected,'Repeated hash entry: '+rel)
         require(len(digest)==64 and all(c in '0123456789abcdef' for c in digest),'Bad SHA digest: '+rel)
         expected[rel]=digest
-    actual={p.relative_to(ROOT).as_posix() for p in ROOT.rglob('*') if p.is_file() and p!=manifest}
+    actual={p.relative_to(ROOT).as_posix() for p in ROOT.rglob('*')
+            if p.is_file() and p!=manifest and '.git' not in p.relative_to(ROOT).parts}
     require(actual==set(expected),'Manifest missing or extra files: '+str(sorted(actual^set(expected))[:10]))
     for rel,digest in expected.items():
         h=hashlib.sha256()
