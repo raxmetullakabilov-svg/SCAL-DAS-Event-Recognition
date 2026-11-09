@@ -1,0 +1,5 @@
+model,class_name,recall_mean,recall_std,n_seeds
+scal_rdft,car,0.6969696969696969,0.3674047167570346,3
+scal_rdft,construction,1.0,0.0,3
+spectrum_rdft,car,0.7272727272727274,0.31491832864888686,3
+spectrum_rdft,construction,1.0,0.0,3

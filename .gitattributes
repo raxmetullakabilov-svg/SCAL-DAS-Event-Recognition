@@ -1,0 +1,10 @@
+# Preserve exact scientific artifacts and protocol hashes across Windows and Linux.
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.ipynb -text
+*.csv -text
+*.json -text
+*.txt -text

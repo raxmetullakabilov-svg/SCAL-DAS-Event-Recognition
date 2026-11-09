@@ -1,0 +1,12 @@
+,old,old,old,B1-R,B1-R,B1-R
+b1_role,train,val,test,train,val,test
+class_name,,,,,,
+car,325,76,36,325,76,36
+construction,366,7,2,247,0,128
+fence,113,2,75,113,2,75
+longboard,175,10,16,175,10,16
+manipulation,100,48,8,97,56,3
+openclose,29,10,7,29,10,7
+regular,302,1,65,302,1,65
+running,168,34,56,168,0,90
+walk,467,21,3,464,24,3

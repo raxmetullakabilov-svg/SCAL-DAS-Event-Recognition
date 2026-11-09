@@ -1,0 +1,190 @@
+{
+  "benchmark": {
+    "b1r_sha256": "9fab73d477624ff3878ee3ec3cb2e86f5a4aa9bb17ce00e47fedf260d350fce7",
+    "interpretation": "within-deployment, event-instance-level, crop-support-overlap-controlled evaluation",
+    "n_events": 137,
+    "n_samples": 2522,
+    "name": "B1-R",
+    "source_phase1_sha256": "d5248a7d5730e7ad6857c5475f248e27cd315d9c5e26235eaba57421936cfe44",
+    "source_phase2_sha256": "c05ef6f99c1f9d235995f3db1f2067b60b988cf4b03a3d905c3c76d5fd826eef",
+    "split_event_counts": {
+      "test": 18,
+      "train": 108,
+      "val": 11
+    },
+    "split_patch_counts": {
+      "test": 423,
+      "train": 1920,
+      "val": 179
+    },
+    "validation_missing_classes": [
+      "construction",
+      "running"
+    ],
+    "validation_present_classes": [
+      "car",
+      "fence",
+      "longboard",
+      "manipulation",
+      "openclose",
+      "regular",
+      "walk"
+    ],
+    "version": "B1R_v1.0"
+  },
+  "checkpoint_selection": {
+    "aggregation": "mean patch probability within each annotation-derived event instance, followed by multiclass NLL over the 11 validation events",
+    "direction": "minimize",
+    "headline_test_checkpoint": "primary_nll_checkpoint_only",
+    "missing_true_validation_classes": [
+      "construction",
+      "running"
+    ],
+    "output_classes": 9,
+    "primary_metric": "validation_event_nll_9way",
+    "scientific_rationale": [
+      "Nine-class validation macro-F1 is structurally inappropriate because construction and running have no independent validation component in B1-R.",
+      "Observed-seven-class macro-F1 is discontinuous and highly unstable with only 11 validation events, including singleton classes.",
+      "Event-level NLL is a smooth proper probabilistic score defined for every validation event and uses the full 9-way softmax; probability assigned to absent classes is indirectly penalized on observed events.",
+      "The criterion still cannot directly validate construction/running accuracy; that limitation is explicit and no performance claim for those classes is made before final held-out test evaluation."
+    ],
+    "tie_break": "earliest epoch",
+    "tie_tolerance": 1e-08,
+    "true_validation_classes": [
+      "car",
+      "fence",
+      "longboard",
+      "manipulation",
+      "openclose",
+      "regular",
+      "walk"
+    ]
+  },
+  "data_access_contract": {
+    "no_split_regeneration": true,
+    "phase2_shards": "reuse frozen read-only HDF5 shards; no raw-signal re-extraction",
+    "test": "rows with b1r_role=test",
+    "test_access_before_primary_checkpoint_frozen": false,
+    "test_access_before_training_complete": false,
+    "train": "B1R_SAMPLE_ASSIGNMENTS.csv rows with b1r_role=train",
+    "validation": "rows with b1r_role=val"
+  },
+  "development_freeze": {
+    "allowed": [
+      "bug fixes that preserve protocol semantics",
+      "reporting",
+      "visualization",
+      "predeclared sensitivity analyses"
+    ],
+    "forbidden_after_protocol_freeze": [
+      "changing B1-R membership",
+      "changing model architecture",
+      "changing RDFT settings",
+      "changing optimizer or learning rate",
+      "changing GRL schedule or location-loss weight",
+      "changing seed set",
+      "changing primary checkpoint metric",
+      "using test outcomes to alter training/checkpoint rules"
+    ]
+  },
+  "event_inference": {
+    "classwise_recall": true,
+    "patch_metrics": "secondary only",
+    "patch_to_event": "arithmetic mean of patch class probabilities",
+    "primary_test_metrics": [
+      "accuracy",
+      "balanced_accuracy",
+      "macro_f1",
+      "nll",
+      "brier",
+      "ece5"
+    ],
+    "primary_unit": "event instance"
+  },
+  "initialization_equivalence": {
+    "gate_required": true,
+    "raw_pair": "For each seed, raw TS-ResNet and raw SCAL-DAS must have identical initial backbone and event-head weights before the adversarial head is instantiated.",
+    "spectral_pair": "For each seed, Spectrum-RDFT and SCAL-RDFT must have identical initial backbone and event-head weights; the only additional random parameters are the SCAL location head."
+  },
+  "models": [
+    "raw_ts_resnet",
+    "raw_scal_das",
+    "spectrum_rdft",
+    "scal_rdft"
+  ],
+  "predeclared_checkpoint_sensitivity": {
+    "purpose": "checkpoint-selection sensitivity only; never used to choose the headline model after seeing test results",
+    "reporting_rule": "If sensitivity is reported, all three checkpoint definitions must be shown for all four models and all three seeds; no cherry-picking.",
+    "secondary_checkpoint": "max_validation_event_macro_f1_observed7",
+    "secondary_labels": [
+      "car",
+      "fence",
+      "longboard",
+      "manipulation",
+      "openclose",
+      "regular",
+      "walk"
+    ],
+    "secondary_tie_break": "earliest epoch",
+    "third_checkpoint": "epoch_60_last"
+  },
+  "protocol_name": "B1-R Training Protocol",
+  "protocol_version": "v1.0",
+  "raw_models": {
+    "adv_gamma": 10.0,
+    "backbone": "TS-ResNetSmall",
+    "class_condition": "ground-truth class one-hot, detached",
+    "input": "sample-wise robust-normalized 8192x128 patch",
+    "location_loss": "SmoothL1",
+    "location_loss_weight": 1.0,
+    "raw_scal_das_adv_lambda_max": 0.15
+  },
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "spectral_models": {
+    "adv_gamma": 10.0,
+    "backbone": "TS-ResNetSmall",
+    "centering": "per-channel spectral mean subtraction",
+    "compression": "log10 magnitude",
+    "input": "frozen raw 8192x128 patch",
+    "keep_bins": 2048,
+    "location_loss": "SmoothL1",
+    "location_loss_weight": 1.0,
+    "magnitude_floor": 1e-06,
+    "n_fft": 24576,
+    "rdft": "one-sided RFFT",
+    "redundancy": 3,
+    "scal_rdft_adv_lambda_max": 0.15,
+    "window": "Hann, periodic=False"
+  },
+  "status": "FROZEN_BEFORE_RETRAINING",
+  "training": {
+    "batch_size": 8,
+    "early_stopping": false,
+    "embedding_dim": 192,
+    "epochs": 60,
+    "gradient_clip_norm": 5.0,
+    "learning_rate": 0.0003,
+    "mixed_precision": true,
+    "num_workers": 0,
+    "optimizer": "AdamW",
+    "reason_no_early_stopping": "Validation contains only 7/9 classes; training horizon must not depend on a structurally incomplete class subset.",
+    "resume_safe": true,
+    "sampler": "class_event_balanced",
+    "sampler_definition": "uniform over classes, then uniform over train events within class, then uniform over patches within event",
+    "weight_decay": 0.0001
+  },
+  "uncertainty": {
+    "bootstrap": "class-stratified event bootstrap",
+    "confidence_level": 0.95,
+    "metrics": [
+      "macro_f1",
+      "balanced_accuracy"
+    ],
+    "repetitions": 2000,
+    "singleton_class_rule": "Singleton test classes remain fixed within their class stratum in each bootstrap replicate; disclose this limitation."
+  }
+}

@@ -1,0 +1,17 @@
+# Keep large, possibly licensed source/derived signal data outside Git.
+*.pt
+*.pth
+*.h5
+*.hdf5
+*.npy
+*.npz
+*.zip
+__pycache__/
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store
+.env
+.env.*
+*.pem
+*.key
+*.log

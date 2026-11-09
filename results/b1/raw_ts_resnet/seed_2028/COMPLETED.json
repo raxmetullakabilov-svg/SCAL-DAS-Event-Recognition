@@ -1,0 +1,25 @@
+{
+  "b1r_sha": "9fab73d477624ff3878ee3ec3cb2e86f5a4aa9bb17ce00e47fedf260d350fce7",
+  "epochs_completed": 60,
+  "headline_checkpoint": "primary_nll",
+  "model_name": "raw_ts_resnet",
+  "primary_epoch": 2,
+  "primary_val_nll_9way": 4.084650999450303,
+  "protocol_sha": "1ea5a907f4e0f7d5bc87d43bd82f649089d5350329afb0133d3de86f1ca33dab",
+  "secondary_epoch": 41,
+  "secondary_val_macro_f1_observed7": 0.38095238095238093,
+  "seed": 2028,
+  "status": "COMPLETE",
+  "test_event_metrics_primary": {
+    "accuracy": 0.2222222222222222,
+    "balanced_accuracy": 0.3333333333333333,
+    "brier": 1.2743968014955411,
+    "ece5": 0.6055088516237548,
+    "macro_f1": 0.2354497354497354,
+    "macro_precision": 0.24074074074074078,
+    "macro_recall": 0.3333333333333333,
+    "n": 18,
+    "nll": 4.768041362144864,
+    "weighted_f1": 0.18253968253968253
+  }
+}

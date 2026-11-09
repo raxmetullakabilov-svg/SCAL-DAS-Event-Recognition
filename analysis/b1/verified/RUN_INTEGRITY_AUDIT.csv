@@ -1,0 +1,13 @@
+model,seed,epochs,primary_epoch_reported,primary_epoch_recomputed,secondary_epoch_reported,secondary_epoch_recomputed,b1r_sha_ok,protocol_sha_ok,status,checkpoint_rule_ok
+raw_ts_resnet,2026,60,1,1,1,1,True,True,COMPLETE,True
+raw_ts_resnet,2027,60,1,1,2,2,True,True,COMPLETE,True
+raw_ts_resnet,2028,60,2,2,41,41,True,True,COMPLETE,True
+raw_scal_das,2026,60,27,27,40,40,True,True,COMPLETE,True
+raw_scal_das,2027,60,22,22,48,48,True,True,COMPLETE,True
+raw_scal_das,2028,60,20,20,48,48,True,True,COMPLETE,True
+spectrum_rdft,2026,60,31,31,24,24,True,True,COMPLETE,True
+spectrum_rdft,2027,60,17,17,17,17,True,True,COMPLETE,True
+spectrum_rdft,2028,60,18,18,4,4,True,True,COMPLETE,True
+scal_rdft,2026,60,20,20,60,60,True,True,COMPLETE,True
+scal_rdft,2027,60,33,33,2,2,True,True,COMPLETE,True
+scal_rdft,2028,60,18,18,18,18,True,True,COMPLETE,True

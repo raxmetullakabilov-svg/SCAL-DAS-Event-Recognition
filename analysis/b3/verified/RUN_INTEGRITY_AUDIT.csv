@@ -1,0 +1,7 @@
+model,seed,completed_status,training_complete_status,protocol_sha_match,history_rows,last_epoch,headline_checkpoint,metrics_recomputed_match,max_abs_metric_difference
+spectrum_rdft,2026,COMPLETE,TRAINING_COMPLETE,True,80,80,epoch_80_fixed,True,1.1102230246251565e-16
+spectrum_rdft,2027,COMPLETE,TRAINING_COMPLETE,True,80,80,epoch_80_fixed,True,1.1102230246251565e-16
+spectrum_rdft,2028,COMPLETE,TRAINING_COMPLETE,True,80,80,epoch_80_fixed,True,1.1102230246251565e-14
+scal_rdft,2026,COMPLETE,TRAINING_COMPLETE,True,80,80,epoch_80_fixed,True,1.1102230246251565e-16
+scal_rdft,2027,COMPLETE,TRAINING_COMPLETE,True,80,80,epoch_80_fixed,True,1.1102230246251565e-16
+scal_rdft,2028,COMPLETE,TRAINING_COMPLETE,True,80,80,epoch_80_fixed,True,5.417888360170764e-14

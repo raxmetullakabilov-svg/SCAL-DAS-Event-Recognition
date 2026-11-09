@@ -1,0 +1,20 @@
+name: Verify stored results and provenance
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  artifact-audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Check out exact artifact bytes
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Verify checksums, split boundaries, and 18 event-level runs
+        run: python scripts/verify_release.py

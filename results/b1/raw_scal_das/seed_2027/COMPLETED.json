@@ -1,0 +1,25 @@
+{
+  "b1r_sha": "9fab73d477624ff3878ee3ec3cb2e86f5a4aa9bb17ce00e47fedf260d350fce7",
+  "epochs_completed": 60,
+  "headline_checkpoint": "primary_nll",
+  "model_name": "raw_scal_das",
+  "primary_epoch": 22,
+  "primary_val_nll_9way": 2.913144495376301,
+  "protocol_sha": "1ea5a907f4e0f7d5bc87d43bd82f649089d5350329afb0133d3de86f1ca33dab",
+  "secondary_epoch": 48,
+  "secondary_val_macro_f1_observed7": 0.6761904761904761,
+  "seed": 2027,
+  "status": "COMPLETE",
+  "test_event_metrics_primary": {
+    "accuracy": 0.1111111111111111,
+    "balanced_accuracy": 0.08333333333333333,
+    "brier": 0.9835824795711942,
+    "ece5": 0.2772138023788529,
+    "macro_f1": 0.043209876543209874,
+    "macro_precision": 0.03333333333333334,
+    "macro_recall": 0.08333333333333333,
+    "n": 18,
+    "nll": 2.57438885207814,
+    "weighted_f1": 0.06790123456790123
+  }
+}

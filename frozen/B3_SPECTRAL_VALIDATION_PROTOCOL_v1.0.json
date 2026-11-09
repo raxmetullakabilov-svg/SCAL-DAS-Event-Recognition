@@ -1,0 +1,74 @@
+{
+  "active_classes": [
+    "car",
+    "construction"
+  ],
+  "amp": true,
+  "audit_only_source_val_events": 4,
+  "audit_only_source_val_patches": 19,
+  "b3_pair": "F4_to_F1",
+  "batch_size": 8,
+  "checkpoint_policy": "fixed epoch 80; no validation-selected checkpoint; no early stopping",
+  "class_mapping": {
+    "car": 0,
+    "construction": 1
+  },
+  "embedding_dim": 192,
+  "epochs": 80,
+  "gradient_clip_norm": 5.0,
+  "interpretation": "extreme source-only two-class spatial-transfer stress test; not nine-class generalization and not external-site validation",
+  "learning_rate": 0.0003,
+  "models": [
+    "spectrum_rdft",
+    "scal_rdft"
+  ],
+  "optimizer": "AdamW",
+  "phase2_sha256": "c05ef6f99c1f9d235995f3db1f2067b60b988cf4b03a3d905c3c76d5fd826eef",
+  "primary_metrics": [
+    "event_macro_f1",
+    "event_balanced_accuracy"
+  ],
+  "protocol_sha256": "2db80f1e58721fc1bab060df59d2232597607b600e98d367573d120f19a71172",
+  "protocol_version": "B3_Spectral_Validation_v1.0",
+  "purpose": "Reviewer-requested target-blind spectral validation of Spectrum-RDFT and SCAL-RDFT on the frozen F4_to_F1 B3 target.",
+  "rdft": {
+    "centering": "mean subtraction over retained frequency bins per spatial channel",
+    "hann_periodic": false,
+    "keep_bins": 2048,
+    "log": "log10 clamp min 1e-6",
+    "magnitude": "abs",
+    "n_fft": 24576,
+    "redundancy": 3,
+    "time_len": 8192
+  },
+  "sampler": "class-event-balanced with replacement",
+  "scal": {
+    "class_condition": "ground-truth one-hot detached",
+    "gamma": 10.0,
+    "lambda_max": 0.15,
+    "location_loss": "SmoothL1",
+    "location_loss_weight": 1.0
+  },
+  "secondary_metrics": [
+    "event_accuracy",
+    "event_nll",
+    "event_brier",
+    "event_ece5"
+  ],
+  "seeds": [
+    2026,
+    2027,
+    2028
+  ],
+  "source_train_source_val_actual_support_overlap_pairs": 30,
+  "source_train_target_actual_support_overlap_pairs": 0,
+  "source_val_target_actual_support_overlap_pairs": 0,
+  "source_validation_policy": "source_val is excluded from checkpoint/model selection because actual 8192x128 raw supports overlap source_train; it is retained only as provenance/audit metadata.",
+  "target_test_events": 14,
+  "target_test_patches": 300,
+  "test_access_policy": "target_test loader/evaluation is created only after epoch 80 training completes; target metrics are never used for tuning or selection.",
+  "training_events": 15,
+  "training_patches": 296,
+  "uncertainty": "2000 class-stratified event bootstrap replicates per seed; across-seed mean\u00b1SD reported descriptively",
+  "weight_decay": 0.0001
+}

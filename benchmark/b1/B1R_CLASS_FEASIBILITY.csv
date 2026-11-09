@@ -1,0 +1,10 @@
+class_name,b1r_atomic_groups,events,patches,train,val,test,validation_independent_component_feasible
+car,13,18,437,14,2,2,True
+construction,2,19,375,16,0,3,False
+fence,13,21,190,18,1,2,True
+longboard,8,9,201,7,1,1,True
+manipulation,11,16,156,11,4,1,True
+openclose,11,13,46,10,1,2,True
+regular,5,5,368,3,1,1,True
+running,2,15,258,11,0,4,False
+walk,5,21,491,18,1,2,True

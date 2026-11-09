@@ -1,0 +1,7 @@
+metric,original_B1,B1_R
+cross-partition raw-support overlapping patch pairs,149,0
+train-val overlapping patch pairs,72,0
+train-test overlapping patch pairs,7,0
+val-test overlapping patch pairs,70,0
+exact raw-patch SHA duplicates across partitions,0,0
+old leakage groups crossing partitions,0,0

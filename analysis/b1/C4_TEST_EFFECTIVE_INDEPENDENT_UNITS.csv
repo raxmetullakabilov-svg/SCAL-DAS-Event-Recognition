@@ -1,0 +1,10 @@
+class_name,test_events,test_atomic_groups,test_recordings,test_patches,singleton_event_class,singleton_group_class,singleton_recording_class
+car,2,2,1,36,False,False,True
+construction,3,1,1,128,False,True,True
+fence,2,1,1,75,False,True,True
+longboard,1,1,1,16,True,True,True
+manipulation,1,1,1,3,True,True,True
+openclose,2,1,1,7,False,True,True
+regular,1,1,1,65,True,True,True
+running,4,1,1,90,False,True,True
+walk,2,2,1,3,False,False,True

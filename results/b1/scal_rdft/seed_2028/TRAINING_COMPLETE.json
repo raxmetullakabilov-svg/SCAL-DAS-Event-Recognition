@@ -1,0 +1,11 @@
+{
+  "b1r_sha": "9fab73d477624ff3878ee3ec3cb2e86f5a4aa9bb17ce00e47fedf260d350fce7",
+  "epochs_completed": 60,
+  "model_name": "scal_rdft",
+  "primary_epoch": 18,
+  "primary_val_nll_9way": 0.23527849819798885,
+  "protocol_sha": "1ea5a907f4e0f7d5bc87d43bd82f649089d5350329afb0133d3de86f1ca33dab",
+  "secondary_epoch": 18,
+  "secondary_val_macro_f1_observed7": 1.0,
+  "seed": 2028
+}

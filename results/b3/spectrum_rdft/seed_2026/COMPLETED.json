@@ -1,0 +1,17 @@
+{
+  "epochs_completed": 80,
+  "headline_checkpoint": "epoch_80_fixed",
+  "name": "spectrum_rdft",
+  "protocol_sha": "2db80f1e58721fc1bab060df59d2232597607b600e98d367573d120f19a71172",
+  "seed": 2026,
+  "status": "COMPLETE",
+  "target_event_metrics": {
+    "accuracy": 0.9285714285714286,
+    "balanced_accuracy": 0.9545454545454546,
+    "brier": 0.20356037389063708,
+    "ece5": 0.17361726655603768,
+    "macro_f1": 0.9047619047619047,
+    "n": 14,
+    "nll": 0.8342097979063763
+  }
+}

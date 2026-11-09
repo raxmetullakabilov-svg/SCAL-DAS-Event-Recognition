@@ -1,0 +1,10 @@
+class_name,val_events,val_atomic_groups,val_recordings
+car,2,2,1
+construction,0,0,0
+fence,1,1,1
+longboard,1,1,1
+manipulation,4,1,1
+openclose,1,1,1
+regular,1,1,1
+running,0,0,0
+walk,1,1,1

@@ -1,0 +1,16 @@
+event_id,class_id,class_name,recording_id,old_role,old_group,n_patches,b1r_group_id,b1r_role,role_changed
+42066506379285dca541fd9d,8,walk,walking_2023-04-17T121933+0100,val,LG_6d540ab3237f8b3e,21,B1R_ffb2687393781829,train,True
+6037156cc91f767ff58d9725,1,construction,reconstruction1_2023-06-06T150714+0100,train,LG_efcb9bfb625013a6,2,B1R_efcb9bfb625013a6,test,True
+7a6040eb7eed1dea7d1b6576,1,construction,reconstruction1_2023-06-06T150714+0100,test,LG_5a32841605676eb3,1,B1R_14d46c87bf30c35c,train,True
+7d85cd968785d67c0f162045,1,construction,reconstruction1_2023-06-06T150714+0100,val,LG_80546bfc31cc5979,6,B1R_14d46c87bf30c35c,train,True
+88d7b693a2779c9b9ff0fe55,1,construction,reconstruction1_2023-06-06T150714+0100,val,LG_706fcce7af78d661,1,B1R_14d46c87bf30c35c,train,True
+98fb1824928d104dfa9dba82,2,fence,kopani_plot_2023-11-07T150207Z,val,LG_ab17f23809ef6393,1,B1R_9b81283c27b48d2f,train,True
+a4ea67afaf65ce577b98f1d2,4,manipulation,manipulation_2023-04-17T122847+0100,train,LG_f35878da21085ef8,3,B1R_f35878da21085ef8,test,True
+b0ff1bf2850c00eaada52653,4,manipulation,manipulation_2023-04-17T122847+0100,test,LG_65b5a309b2f910b6,8,B1R_d923bdc9167add71,val,True
+bc209c32d5a253776b135d76,2,fence,kopani_plot_2023-11-07T150207Z,val,LG_43ccb522cabae557,1,B1R_9b81283c27b48d2f,train,True
+cc93af44dcaf3505d896de45,2,fence,fence_2023-04-17T123117+0100,train,LG_91c940041847035b,2,B1R_91c940041847035b,val,True
+e83b7038a6416901bf531fc7,8,walk,walking_2023-04-17T121933+0100,train,LG_c8940ca07439b364,24,B1R_c8940ca07439b364,val,True
+ea92fed5a7560ed4cab014cc,1,construction,reconstruction1_2023-06-06T150714+0100,train,LG_efcb9bfb625013a6,125,B1R_efcb9bfb625013a6,test,True
+eca556ca9cf690aefa8586a2,1,construction,reconstruction1_2023-06-06T150714+0100,test,LG_598aa365b1bdba68,1,B1R_14d46c87bf30c35c,train,True
+ed45238ddf531bba2861c11d,1,construction,reconstruction1_2023-06-06T150714+0100,train,LG_efcb9bfb625013a6,1,B1R_efcb9bfb625013a6,test,True
+f105608495ef0bd6761cd6e3,7,running,running_2023-04-17T122413+0100,val,LG_169eecf49a23b5b8,34,B1R_2a1e299aa1f1f005,test,True

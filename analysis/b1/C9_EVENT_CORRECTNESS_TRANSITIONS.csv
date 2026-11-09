@@ -1,0 +1,4 @@
+seed,spectrum_wrong_scal_correct,spectrum_correct_scal_wrong,both_correct,both_wrong,mcnemar_exact_p
+2026,3,0,9,6,0.25
+2027,1,0,9,8,1.0
+2028,2,1,6,9,1.0

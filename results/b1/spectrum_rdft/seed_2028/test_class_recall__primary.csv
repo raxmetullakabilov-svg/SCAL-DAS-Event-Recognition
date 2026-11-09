@@ -1,0 +1,10 @@
+class_id,class_name,n_events,recall
+0,car,2,0.5
+1,construction,3,0.3333333333333333
+2,fence,2,0.5
+3,longboard,1,1.0
+4,manipulation,1,1.0
+5,openclose,2,0.5
+6,regular,1,1.0
+7,running,4,0.0
+8,walk,2,0.0

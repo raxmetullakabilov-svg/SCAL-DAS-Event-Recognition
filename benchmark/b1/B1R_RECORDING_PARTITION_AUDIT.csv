@@ -1,0 +1,17 @@
+recording_id,class_name,n_events,train_events,val_events,test_events,n_partitions,partitions
+auto2_2023-04-17T124510+0100,car,5,5,0,0,1,train
+auto4_2023-06-06T144655+0100,car,2,2,0,0,1,train
+auto4_2023-06-06T145055+0100,car,6,2,2,2,3,test|train|val
+auto_2023-04-17T124152+0100,car,5,5,0,0,1,train
+fence_2023-04-17T123117+0100,fence,11,10,1,0,2,train|val
+kopani_plot_2023-11-07T150207Z,fence,8,8,0,0,1,train
+longboard_2023-04-17T123543+0100,longboard,3,3,0,0,1,train
+longboardroad_2023-04-17T123638+0100,longboard,6,4,1,1,3,test|train|val
+manipulation_2023-04-17T122847+0100,manipulation,16,11,4,1,3,test|train|val
+openingclosing_2023-04-17T122658+0100,openclose,13,10,1,2,3,test|train|val
+plot_2023-11-07T150119Z,fence,2,0,0,2,1,test
+reconstruction1_2023-06-06T150714+0100,construction,19,16,0,3,2,test|train
+regularshit_2023-04-17T130103+0100,regular,5,3,1,1,3,test|train|val
+running_2023-04-17T122413+0100,running,15,11,0,4,2,test|train
+walking2_2023-04-17T122153+0100,walk,6,6,0,0,1,train
+walking_2023-04-17T121933+0100,walk,15,12,1,2,3,test|train|val
